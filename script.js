@@ -1,25 +1,43 @@
+let page = document.querySelector('.page');
 let pageBtn = document.querySelector('.page__btn');
+
+let hexAFrom;
+let hexBFrom;
+let hexCFrom;
+let hexATo;
+let hexBTo;
+let hexCTo;
+let hexFrom;
+let hexTo;
 
 function addSymbol(num) {
   if (num.length < 2) {
     num = '0' + num;
-    console.log(num);
-  } else [console.log(num + ' Все ОК')];
+  }
+
+  return num;
 }
 
 function randomHex() {
-  let hexAFrom = addSymbol(parseInt((255 * Math.random()).toFixed(0)).toString(16));
-  let hexBFrom = parseInt((255 * Math.random()).toFixed(0)).toString(16);
-  let hexCFrom = parseInt((255 * Math.random()).toFixed(0)).toString(16);
+  hexAFrom = addSymbol(parseInt((255 * Math.random()).toFixed(0)).toString(16));
+  hexBFrom = addSymbol(parseInt((255 * Math.random()).toFixed(0)).toString(16));
+  hexCFrom = addSymbol(parseInt((255 * Math.random()).toFixed(0)).toString(16));
 
-  let hexFrom = hexAFrom + hexBFrom + hexCFrom;
+  hexATo = addSymbol(parseInt((255 * Math.random()).toFixed(0)).toString(16));
+  hexBTo = addSymbol(parseInt((255 * Math.random()).toFixed(0)).toString(16));
+  hexCTo = addSymbol(parseInt((255 * Math.random()).toFixed(0)).toString(16));
 
-  let hexATo = parseInt((255 * Math.random()).toFixed(0)).toString(16);
-  let hexBTo = parseInt((255 * Math.random()).toFixed(0)).toString(16);
-  let hexCTo = parseInt((255 * Math.random()).toFixed(0)).toString(16);
-
-  let hexTo = hexATo + hexBTo + hexCTo;
-  console.log(hexFrom + ', ' + hexTo);
+  hexFrom = hexAFrom + hexBFrom + hexCFrom;
+  hexTo = hexATo + hexBTo + hexCTo;
 }
 
-pageBtn.addEventListener('click', randomHex);
+function backgroundSwitch() {
+  page.style.background = `linear-gradient(90deg, #${hexFrom}, #${hexTo}`;
+}
+
+function start() {
+  randomHex();
+  backgroundSwitch(hexFrom, hexTo);
+}
+
+pageBtn.addEventListener('click', start);
