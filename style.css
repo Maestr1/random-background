@@ -6,7 +6,7 @@
   src: local(''),
     url('../fonts/roboto-v30-latin_cyrillic-300.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url('../fonts/roboto-v30-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/roboto-v30-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 .page {
@@ -32,11 +32,15 @@
 }
 
 @keyframes color-change {
-  from {
+  0% {
     color: #fff;
     border-color: #fff;
   }
-  to {
+  50% {
+    color: #4428e0;
+    border-color: #4428e0;
+  }
+  100% {
     color: #1d1d1d;
     border-color: #1d1d1d;
   }
