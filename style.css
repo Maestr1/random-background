@@ -7,7 +7,7 @@
     url('../fonts/roboto-v30-latin_cyrillic-300.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url('../fonts/roboto-v30-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-} 
+}
 
 .page {
   display: flex;
@@ -59,11 +59,21 @@
   animation-timing-function: ease-in-out;
 }
 
+.page__btn:active {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.page__btn:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
 @media (max-width: 900px) {
   .page__title {
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
-    font-size: 24px;  
+    font-size: 24px;
   }
 }

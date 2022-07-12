@@ -32,7 +32,7 @@ function randomHex() {
 }
 
 function backgroundSwitch() {
-  page.style.background = `linear-gradient(90deg, #${hexFrom}, #${hexTo}`;
+  page.style.background = `linear-gradient(135deg, #${hexFrom}, #${hexTo}`;
 }
 
 function start() {
